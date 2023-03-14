@@ -53,7 +53,7 @@ jobs:
           set -e
           curl -fsSL "https://github.com/bufbuild/buf/releases/latest/download/buf-$(uname -s)-$(uname -m).tar.gz" | tar -xzC /usr/local --strip-components 1
           dart pub remove sass_analysis
-          dart pub upgrade
+          dart pub get
           dart run grinder protobuf
           EOF
 
